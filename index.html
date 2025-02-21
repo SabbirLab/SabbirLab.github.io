@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbir Ahmed - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 min-h-screen overflow-x-hidden">
+    <!-- Animated Cursor -->
+    <div class="cursor-dot" id="cursor"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Floating Navigation -->
+    <nav class="fixed top-8 right-8 z-50 flex gap-6">
+        <a href="#about" class="nav-link text-white/80 hover:text-blue-400 transition-all">About</a>
+        <a href="#projects" class="nav-link text-white/80 hover:text-blue-400 transition-all">Projects</a>
+        <a href="#contact" class="nav-link text-white/80 hover:text-blue-400 transition-all">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="text-center space-y-6 z-10">
+            <div class="overflow-hidden">
+                <h1 class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 hero-title transform translate-y-full">
+                    Sabbir Ahmed
+                </h1>
+            </div>
+            <div class="overflow-hidden">
+                <p class="text-2xl text-white/80 hero-subtitle transform translate-y-full">
+                    Electrical Engineer & IoT Developer
+                </p>
+            </div>
+            <div class="mt-8 flex justify-center space-x-4 opacity-0" id="hero-cta">
+                <a href="#contact" class="cta-button">Get in Touch</a>
+                <a href="https://github.com/yourusername" target="_blank" class="social-button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="particles"></div>
+            <div class="gradient-pulse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 relative">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="about-image relative">
+                <div class="floating-avatar"></div>
+                <div class="avatar-glow"></div>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-blue-400 opacity-0">About Me</h2>
+                <p class="text-lg text-white/80 leading-relaxed opacity-0">
+                    Passionate Electrical Engineer specializing in IoT and embedded systems with 3+ years of hands-on experience. 
+                    Currently pursuing BSc in EEE at United International University. Focused on developing smart solutions 
+                    through innovative technology integration.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="skill-card opacity-0">
+                        <i class="fas fa-microchip text-3xl text-blue-400"></i>
+                        <h3 class="text-xl mt-2">Embedded Systems</h3>
+                        <p class="text-sm text-white/60 mt-2">ARM Cortex, Arduino, ESP32</p>
+                    </div>
+                    <div class="skill-card opacity-0">
+                        <i class="fas fa-wifi text-3xl text-blue-400"></i>
+                        <h3 class="text-xl mt-2">IoT Development</h3>
+                        <p class="text-sm text-white/60 mt-2">MQTT, LoRaWAN, Node-RED</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 relative">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400 opacity-0">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card opacity-0">
+                    <div class="project-image pulse-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <h3 class="text-2xl mt-4">Smart IoT RC Car</h3>
+                    <p class="text-white/80 mt-2">ESP32-based vehicle with real-time telemetry</p>
+                    <div class="mt-4 flex space-x-2">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">RF24L01</span>
+                    </div>
+                    <a href="#project-details" class="project-link mt-4">View Details →</a>
+                </div>
+                <!-- Add more project cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-400 mb-8 opacity-0">Let's Connect</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="contact-card opacity-0">
+                    <i class="fas fa-envelope text-4xl text-blue-400"></i>
+                    <a href="mailto:allexsabbir117@gmail.com" class="mt-4 block text-xl hover:text-blue-400 transition-colors">
+                        allexsabbir117@gmail.com
+                    </a>
+                </div>
+                <div class="contact-card opacity-0">
+                    <i class="fas fa-phone text-4xl text-blue-400"></i>
+                    <p class="mt-4 text-xl">+880 1989 181983</p>
+                </div>
+            </div>
+            <div class="flex justify-center space-x-6 mt-12">
+                <a href="http://linkedin.com/in/sabbirahmed360" target="_blank" class="social-icon opacity-0">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/yes_sabbir" target="_blank" class="social-icon opacity-0">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/yes_sabbir" target="_blank" class="social-icon opacity-0">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Custom Cursor Logic
+            const cursor = document.getElementById('cursor');
+            const cursorOutline = document.getElementById('cursor-outline');
+            
+            document.addEventListener('mousemove', (e) => {
+                gsap.to(cursor, {
+                    x: e.clientX,
+                    y: e.clientY,
+                    duration: 0.1
+                });
+                
+                gsap.to(cursorOutline, {
+                    x: e.clientX,
+                    y: e.clientY,
+                    duration: 0.3
+                });
+            });
+
+            // Hero Section Animations
+            gsap.timeline()
+                .from(".hero-title", {
+                    duration: 1.5,
+                    y: 0,
+                    opacity: 1,
+                    ease: "power4.out"
+                })
+                .from(".hero-subtitle", {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: "bounce.out"
+                }, "-=0.5")
+                .to("#hero-cta", {
+                    duration: 0.8,
+                    opacity: 1,
+                    y: 0,
+                    ease: "power2.out"
+                });
+
+            // Scroll Trigger Animations
+            gsap.utils.toAll(".opacity-0").forEach(element => {
+                ScrollTrigger.create({
+                    trigger: element,
+                    start: "top 80%",
+                    onEnter: () => {
+                        gsap.to(element, {
+                            duration: 1,
+                            opacity: 1,
+                            y: 0,
+                            ease: "power3.out"
+                        });
+                    }
+                });
+            });
+
+            // Interactive Hover Effects
+            gsap.utils.toAll(".project-card, .skill-card").forEach(element => {
+                element.addEventListener("mouseenter", () => {
+                    gsap.to(element, {
+                        duration: 0.3,
+                        y: -5,
+                        scale: 1.02,
+                        boxShadow: "0 25px 50px -12px rgba(96, 165, 250, 0.3)"
+                    });
+                });
+
+                element.addEventListener("mouseleave", () => {
+                    gsap.to(element, {
+                        duration: 0.3,
+                        y: 0,
+                        scale: 1,
+                        boxShadow: "none"
+                    });
+                });
+            });
+
+            // Continuous Animations
+            gsap.to(".gradient-pulse", {
+                duration: 6,
+                scale: 1.2,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+
+            gsap.to(".floating-avatar", {
+                duration: 4,
+                y: 20,
+                rotate: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        });
+    </script>
+
+    <style>
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: #60a5fa;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            z-index: 999;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #60a5fa;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            z-index: 998;
+            transition: all 0.3s ease-out;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #3b82f6, #60a5fa);
+            padding: 12px 32px;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(96, 165, 250, 0.5);
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag {
+            background: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.875rem;
+        }
+
+        .floating-avatar {
+            width: 320px;
+            height: 320px;
+            background: url('your-avatar.jpg') center/cover;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#60a5fa 10%, transparent 10%);
+            background-size: 20px 20px;
+            animation: particles 20s linear infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes particles {
+            from { background-position: 0 0; }
+            to { background-position: 1000px 1000px; }
+        }
+
+        .gradient-pulse {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.1) 0%, transparent 60%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.1; }
+        }
+    </style>
+</body>
+</html>
